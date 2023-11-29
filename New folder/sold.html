@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.creativemarket.com%2F0.1.0%2Fps%2F7536267%2F1820%2F1214%2Fm1%2Ffpnw%2Fwm0%2Flogo-template-v.2-56-.jpg%3F1578112807%26s%3D999b9f10fa3b98c45fc7c26d7cda7b33&f=1&nofb=1&ipt=86f44db601564c7ce85938716d705d04a4e10042f006514a5ce8bc3b12d42a75&ipo=images);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .p { color: red;font-family: cursive;font-size:3.5em; }
+        .i { color: blue;font-family: cursive; font-size:3.5em;}
+        .c { color: green;font-family: cursive; font-size:3.5em;}
+        .a { color: orange; font-family: cursive;font-size:3.5em;}
+        .s { color: purple; font-family: cursive;font-size:3.5em;}
+        .o { color: teal; font-family: cursive;font-size:3.5em;}
+        div{
+            display: flex;
+            justify-content: center;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            grid-gap: 20px;
+            padding: 3em;
+        }
+
+        .product {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product img {
+            max-width: 100%;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: x-large;
+        }
+        section{
+            font-family: cursive,fantasy;
+            font-weight: 500;
+            font-size: x-large;
+            text-indent: 5em;
+            margin-top: 4em;
+        }
+        
+        #runnig{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 70%;
+            margin: 6em;
+        }
+        input{
+            width: 70%;
+            height:auto;
+        }
+        .cursive-text {
+            font-family: cursive;
+            font-size: 36px;
+        }
+
+        .letter {
+            display: inline-block;
+            padding: 0 5px;
+        }
+        
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>items sold</title>
+    
+    
+</head>
+<body>
+    <h1>
+        <div class="cursive-text">
+            <span class="letter p">P</span>
+            <span class="letter i">i</span>
+            <span class="letter c">c</span>
+            <span class="letter a">a</span>
+            <span class="letter s">s</span>
+            <span class="letter o">o</span>
+        </div>
+        </h1>
+        <div id="bar">
+
+            <form id="searchForm" method="post" onsubmit="return validateForm()">
+                <input type="text" id="query" placeholder="Type to search">
+                <button type="submit">Search</button>
+            </form>
+
+            <script>
+                function validateForm() {
+                    var queryInput = document.getElementById("query").value;
+        
+                    if (queryInput.trim() !== "") {
+                        alert("Server Error!");
+                        return false;
+                    }
+                    return true;
+                }
+            </script>
+        </div>
+        <section class="topmargin"><b>Running Auction</b></section>
+        <div id="runnig">
+            <h2>Oh ! No auctions are currently active</h2><img src="https://cdn-icons-png.flaticon.com/128/2338/2338319.png?track=ais">
+        </div>
+
+        <section><b>Our sold paintings </b></section>
+        <div class="image-grid" id="image-grid">
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/painting-person-suffering-from-anxiety_23-2150859284.jpg" alt="Image 1">
+                <div class="price"> &#8383 1.00</div>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/cubist-illustration-malaga_23-2150159191.jpg" alt="Image 2">
+                <div class="price"> &#8383 1.50</div>
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/abstract-face-painting-illustration_1020867-3341.jpg" alt="Image 3">
+                <div class="price"> &#8383 1.20</div>
+            </div>
+        <div class="product">
+            <img src="https://img.freepik.com/free-photo/illustration-abstract-fountain-patio_23-2150159188.jpg">
+            <div class="price"> &#8383 0.73</div>
+        </div>
+        <div class="product"><img src="https://img.freepik.com/premium-photo/photo-abstract-painting-with-vibrant-colors-intricate-shapes_822108-5985.jpg">
+            <div class="price"> &#8383 0.65</div>
+        </div>
+        <div class="product"><img src="https://img.freepik.com/premium-photo/photo-painting-man-woman_822108-2122.jpg">
+            <div class="price"> &#8383 0.57</div>
+        </div>
+        <div class="product"><img src="https://img.freepik.com/free-photo/painting-person-suffering-from-anxiety_23-2150859326.jpg">
+            <div class="price"> &#8383 1.27</div>
+        </div>
+        <div class="product"><img src="https://img.freepik.com/premium-photo/abstract-depiction-schizophrenia-mental-disorder-2_927585-2600.jpg">
+            <div class="price"> &#8383 2.00</div>
+        </div>
+        <div class="product"><img src="https://uploads8.wikiart.org/images/pablo-picasso/portrait-of-ambroise-vollard-1910.jpg!PinterestSmall.jpg">
+            <div class="price">&#8383 2.50</div></div>
+        </div>
+</body>
+</html>
